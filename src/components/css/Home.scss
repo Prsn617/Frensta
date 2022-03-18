@@ -1,0 +1,64 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.5em 0;
+  background-color: purple;
+
+  button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+    color: white;
+  }
+}
+
+.homeMain {
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Posts {
+  padding: 0 2em;
+  width: 50%;
+}
+
+.createPost {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 2em 0;
+
+  form {
+    display: flex;
+    width: 60%;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 55px;
+  }
+
+  input {
+    padding: 1em 1.5em;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+.profile {
+  padding: 1em 2em;
+  height: 150px;
+  width: 150px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

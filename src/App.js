@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+} from "react-router-dom";
+import Login from "./components/Login";
+import Home from "./components/Home";
+import { auth } from "./firebase/config";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 
 function App() {
+  let name, uid, pic;
+  const [user, setUser] = useState({});
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  // console.log(`FireAPI: ${process.env.REACT_APP_FIRE_API}`);
+  // console.log(`FireID: ${process.env.REACT_APP_ID}`);
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setUser(user);
+    } else {
+      setIsAuth(false);
+    }
+  });
+
+  const signUserOut = () => {
+    signOut(auth).then(() => {
+      localStorage.clear();
+      setIsAuth(false);
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        {!isAuth ? (
+          <Route
+            path="/"
+            exact
+            element={<Login setIsAuth={setIsAuth} />}
+          ></Route>
+        ) : (
+          <Route
+            path="/"
+            exact
+            element={<Home signOut={signUserOut} user={user} />}
+          ></Route>
+        )}
+      </Switch>
+    </Router>
   );
 }
 

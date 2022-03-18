@@ -1,0 +1,22 @@
+.loginMain {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  border: 2px solid gray;
+  border-radius: 10px;
+
+  button {
+    padding: 0.75em 1em;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,90 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1.5em 0;
+  background-color: purple;
+}
+
+nav button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  color: white;
+}
+
+.homeMain {
+  padding: 1em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.Posts {
+  padding: 0 2em;
+  width: 50%;
+}
+
+.createPost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em 0;
+}
+
+.createPost form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+}
+
+.createPost img {
+  border-radius: 50%;
+  width: 55px;
+}
+
+.createPost input {
+  padding: 1em 1.5em;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.createPost button {
+  display: none;
+}
+
+.profile {
+  padding: 1em 2em;
+  height: 150px;
+  width: 150px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=Home.css.map */
