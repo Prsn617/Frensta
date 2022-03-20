@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Frensta/static/css/main.438b7a80.css",
-    "main.js": "/Frensta/static/js/main.f0d2a77d.js",
+    "main.js": "/Frensta/static/js/main.395291fa.js",
     "static/js/787.f39083f0.chunk.js": "/Frensta/static/js/787.f39083f0.chunk.js",
     "static/media/gic.png": "/Frensta/static/media/gic.d0255db7d660195c2939.png",
     "index.html": "/Frensta/index.html",
     "main.438b7a80.css.map": "/Frensta/static/css/main.438b7a80.css.map",
-    "main.f0d2a77d.js.map": "/Frensta/static/js/main.f0d2a77d.js.map",
+    "main.395291fa.js.map": "/Frensta/static/js/main.395291fa.js.map",
     "787.f39083f0.chunk.js.map": "/Frensta/static/js/787.f39083f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.438b7a80.css",
-    "static/js/main.f0d2a77d.js"
+    "static/js/main.395291fa.js"
   ]
 }
