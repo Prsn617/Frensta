@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./css/Post.css";
 import { auth, db } from "../firebase/config";
 import { deleteDoc, doc, updateDoc } from "firebase/firestore";
+import AlertDialog from "./AlertDialog";
 
 export default function Post({ post }) {
   // const uid = post.uid;
   const [commentt, setComment] = useState("");
   const [display, setDisplay] = useState("hidden");
+  const [open, setOpen] = useState(false);
 
   let name = auth.currentUser.displayName;
   let author = {
@@ -55,19 +57,28 @@ export default function Post({ post }) {
   const deletePost = async (id) => {
     const postsRef = doc(db, "posts", id);
     await deleteDoc(postsRef);
+    setOpen(false);
   };
 
   return (
     <div className="post-container">
       {post.author.id === auth.currentUser.uid && (
-        <button
+        <AlertDialog
           className="delPost"
-          onClick={() => {
-            deletePost(post.id);
-          }}
-        >
-          <span className="material-icons">delete</span>
-        </button>
+          setOpen={setOpen}
+          open={open}
+          del={deletePost}
+          id={post.id}
+        />
+
+        // <button
+        //   className="delPost"
+        //   onClick={() => {
+        //     deletePost(post.id);
+        //   }}
+        // >
+        //   <span className="material-icons">delete</span>
+        // </button>
       )}
 
       <div className="userPosts">

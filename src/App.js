@@ -11,11 +11,8 @@ import { auth } from "./firebase/config";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 
 function App() {
-  let name, uid, pic;
   const [user, setUser] = useState({});
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
-  // console.log(`FireAPI: ${process.env.REACT_APP_FIRE_API}`);
-  // console.log(`FireID: ${process.env.REACT_APP_ID}`);
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -33,7 +30,8 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/">
+      <h1>Noooo</h1>
       <Switch>
         {!isAuth ? (
           <Route

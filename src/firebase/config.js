@@ -6,8 +6,9 @@ import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIRE_API,
   authDomain: "prsn-frensta.firebaseapp.com",
+  // authDomain: "prsn-frensta.firebaseapp.com",
   projectId: "prsn-frensta",
-  storageBucket: "prsn-frensta.appspot.com",
+  storageBucket: process.env.REACT_APP_BUCKET,
   messagingSenderId: process.env.REACT_APP_MSG_ID,
   appId: process.env.REACT_APP_ID,
 };
